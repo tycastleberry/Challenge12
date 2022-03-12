@@ -10,17 +10,16 @@ After the first model is built, a second model was then started to investigate i
 
 ## Results
 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
-
 * Model 1 Using Original Data:
   * The model did a great job of predicting the healthy loans and a decently good job of predicting the high-risk loans. The overall balanced accuracy score was 95%. The healthy loans have near perfect predictions for both the precision and recall metrics. The predictions for the high-risk loans had 85% precision and 91% recall. So, for every 100 predictions the model made that a loan would be high-risk, 85 of the predictions were correct to get an 85% precision score. Of the 619 high-risk loans, the model correctly predicted 563 to get a recall score of 91%. Both of these scores are decently good for the model's predictions concerning high-risk loans.
 
 * Model 2 Using Resampled Data:
-  * The metrics with the oversampled data improved compared to the model with the original data. The balanced accuracy score is now at 99%. The oversampled model still does a near perfect job of predicting healthy loans. The precision score for predicting high-risk loans was about the same as the original model, but there was drastic improvement in the recall score for predicting high-risk loans. The model is now predicting the actual high-risk loans at a 99% rate, a great improvement over the 91% rate with the original data. 
+  * The metrics with the oversampled data improved compared to the model with the original data. The balanced accuracy score is now at 99%. The oversampled model still does a near perfect job of predicting healthy loans. The precision score for predicting high-risk loans was about the same as the original model as it only dropped 1% to 84%, but there was drastic improvement in the recall score for predicting high-risk loans. The model is now predicting the actual high-risk loans at a 99% recall rate, a great improvement over the 91% recall rate with the original data. 
+
 ## Summary
 
 Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
 * Which one seems to perform best? How do you know it performs best?
 * Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
 
-If you do not recommend any of the models, please justify your reasoning.
+I would recommend using the second model that utilizes resampled data. Oversampling the data produced a model that increased recall from 91% to 99%, while only sacrificing a 1% decrease in precision from 85% to 84%. With so few of the loans being high-risk, it's crucial for the model to be correct when identifying an actual high-risk loan. By predicting 99% of the high-risk loans correctly, we can be confident that almost all of the high-risk loans are being properly identified. I'd like the model to be tweaked to improve the precision score so that it's correct a higher percentage of the time when identifying a loan as high-risk. However, I don't mind the tradeoff of the model identifying a loan as high-risk when it's not, because the recall score tells me that the model is catching 99% of the actual high-risk loans. The tradeoff of sacrificing some healthy loans to ensure that almost all of the high-risk ones are identified is justified. 
