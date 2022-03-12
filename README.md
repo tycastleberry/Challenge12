@@ -18,8 +18,4 @@ After the first model is built, a second model was then started to investigate i
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
 I would recommend using the second model that utilizes resampled data. Oversampling the data produced a model that increased recall from 91% to 99%, while only sacrificing a 1% decrease in precision from 85% to 84%. With so few of the loans being high-risk, it's crucial for the model to be correct when identifying an actual high-risk loan. By predicting 99% of the high-risk loans correctly, we can be confident that almost all of the high-risk loans are being properly identified. I'd like the model to be tweaked to improve the precision score so that it's correct a higher percentage of the time when identifying a loan as high-risk. However, I don't mind the tradeoff of the model identifying a loan as high-risk when it's not, because the recall score tells me that the model is catching 99% of the actual high-risk loans. The tradeoff of sacrificing some healthy loans to ensure that almost all of the high-risk ones are identified is justified. 
