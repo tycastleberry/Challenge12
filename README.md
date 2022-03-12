@@ -12,14 +12,11 @@ After the first model is built, a second model was then started to investigate i
 
 Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
 
-* Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
+* Model 1 Using Original Data:
+  * The model did a great job of predicting the healthy loans and a decently good job of predicting the high-risk loans. The overall balanced accuracy score was 95%. The healthy loans have near perfect predictions for both the precision and recall metrics. The predictions for the high-risk loans had 85% precision and 91% recall. So, for every 100 predictions the model made that a loan would be high-risk, 85 of the predictions were correct to get an 85% precision score. Of the 619 high-risk loans, the model correctly predicted 563 to get a recall score of 91%. Both of these scores are decently good for the model's predictions concerning high-risk loans.
 
-
-
-* Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
-
+* Model 2 Using Resampled Data:
+  * The metrics with the oversampled data improved compared to the model with the original data. The balanced accuracy score is now at 99%. The oversampled model still does a near perfect job of predicting healthy loans. The precision score for predicting high-risk loans was about the same as the original model, but there was drastic improvement in the recall score for predicting high-risk loans. The model is now predicting the actual high-risk loans at a 99% rate, a great improvement over the 91% rate with the original data. 
 ## Summary
 
 Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
